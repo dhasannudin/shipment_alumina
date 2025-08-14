@@ -1,4 +1,3 @@
-
         // Data trucking per hari
         const truckData = {
             day1: {
@@ -628,4 +627,3 @@ function generateDrillingTable() {
     generateDrillingTable();
     updateDrillingStats(); // Tambahkan ini
 });
-
