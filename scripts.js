@@ -609,6 +609,105 @@ function generateDrillingTable() {
             // Add active class to clicked button
             event.target.classList.add('active');
         }   
+
+//untuk tambah data harian
+let formsVisible = false;
+
+        function toggleForms() {
+            const formsContainer = document.getElementById('formsContainer');
+            const button = document.querySelector('.add-data-btn');
+            
+            if (formsVisible) {
+                hideForms();
+            } else {
+                showForms();
+            }
+        }
+
+        function showForms() {
+            const formsContainer = document.getElementById('formsContainer');
+            const button = document.querySelector('.add-data-btn');
+            
+            formsContainer.classList.add('show');
+            button.textContent = '❌ Tutup Form';
+            button.style.background = 'linear-gradient(135deg, #ee5a24, #c23616)';
+            formsVisible = true;
+            
+            // Smooth scroll ke form
+            setTimeout(() => {
+                formsContainer.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }, 100);
+        }
+
+        function hideForms() {
+            const formsContainer = document.getElementById('formsContainer');
+            const button = document.querySelector('.add-data-btn');
+            
+            formsContainer.classList.remove('show');
+            button.textContent = '➕ Tambah Data';
+            button.style.background = 'linear-gradient(135deg, #ff6b6b, #ee5a24)';
+            formsVisible = false;
+        }
+
+        // Handle form submissions
+        document.getElementById('loadingForm1').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Format data untuk ditampilkan
+            let displayData = '';
+            for (let [key, value] of Object.entries(data)) {
+                if (value) {
+                    displayData += `${key.replace(/_/g, ' ').toUpperCase()}: ${value}\n`;
+                }
+            }
+            
+            // Simulate saving data
+            alert('✅ Loading Process (Silo) berhasil disimpan!\n\nData yang disimpan:\n' + displayData);
+            
+            // Reset form
+            this.reset();
+        });
+
+        document.getElementById('loadingForm2').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Format data untuk ditampilkan
+            let displayData = '';
+            for (let [key, value] of Object.entries(data)) {
+                if (value) {
+                    displayData += `${key.replace(/_/g, ' ').toUpperCase()}: ${value}\n`;
+                }
+            }
+            
+            // Simulate saving data
+            alert('✅ Loading Process (Port) berhasil disimpan!\n\nData yang disimpan:\n' + displayData);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('input, select, textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+            
+            element.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+
         // Initialize everything when page loads
         document.addEventListener('DOMContentLoaded', function() {
     initCharts();
