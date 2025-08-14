@@ -1,7 +1,4 @@
 <script>
-	
-	
-	
         // Data trucking per hari
         const truckData = {
             day1: {
