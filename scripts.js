@@ -458,7 +458,6 @@
             });
         }
       
-      
     // Update drilling stats - PERBAIKAN
 function updateDrillingStats() {
     const totalPlatforms = currentDrillingData.length;
@@ -473,13 +472,9 @@ function updateDrillingStats() {
     document.getElementById('drillingAvgNetto').textContent = avgNetto;
     document.getElementById('drillingCurrentFilter').textContent = 
         currentDrillingFilter === 'all' ? 'All' : 
-        currentDrillingFilter === 'booster' ? 'Booster' : 'Non Booster';
-  
-    
+        currentDrillingFilter === 'booster' ? 'Booster' : 'Non Booster';  
 }
       
-     
-
 // Filter drilling data
 function filterDrillingData(type) {
     // Update active button
@@ -526,7 +521,6 @@ function secondsToTime(seconds) {
     const secs = Math.floor(seconds % 60);
     return `${hrs}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
 }
-
        // Generate drilling operations table
 function generateDrillingTable() {
     const tbody = document.getElementById('drillingTableBody');
@@ -594,9 +588,7 @@ function generateDrillingTable() {
             <td><strong>${avgTimes.silo_to_port}</strong></td>
         `;
         tbody.appendChild(avgRow);
-    }
-
-        
+    }  
         }
 
         // Tab functionality
@@ -616,10 +608,7 @@ function generateDrillingTable() {
             
             // Add active class to clicked button
             event.target.classList.add('active');
-        }
-
-      
-      
+        }   
         // Initialize everything when page loads
         document.addEventListener('DOMContentLoaded', function() {
     initCharts();
