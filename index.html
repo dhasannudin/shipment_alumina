@@ -496,7 +496,129 @@
                             <div class="table-title">📊 Data Harian</div>
                             <button class="btn-tambah" onclick="toggleForms()">
                                 Tambah Data Baru
-                            </button>
+                            </button> <div class="forms-container" id="formsContainer">
+                <div class="form-section">
+                    <button class="close-btn" onclick="hideForms()">&times;</button>
+                    <h3>🚛 Loading Process (Silo)</h3>
+                    <form id="loadingForm1">
+                        <div class="form-group">
+                            <label for="id">ID:</label>
+                            <input type="text" id="id" name="id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jo">JO:</label>
+                            <input type="text" id="jo" name="jo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nopol">Nopol:</label>
+                            <input type="text" id="nopol" name="nopol" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="driver">Driver:</label>
+                            <input type="text" id="driver" name="driver" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="truck_arrival">Truck Arrival:</label>
+                            <input type="time" id="truck_arrival" name="truck_arrival">
+                        </div>
+                        <div class="form-group">
+                            <label for="scales_wo_alumina">Scales w/o Alumina:</label>
+                            <input type="time" id="scales_wo_alumina" name="scales_wo_alumina">
+                        </div>
+                        <div class="form-group">
+                            <label for="parking">Parking:</label>
+                            <input type="time" id="parking" name="parking">
+                        </div>
+                        <div class="form-group">
+                            <label for="loading_prep_1">Loading Prep 1:</label>
+                            <input type="time" id="loading_prep_1" name="loading_prep_1">
+                        </div>
+                        <div class="form-group">
+                            <label for="first_load_1st">First Load 1st:</label>
+                            <input type="time" id="first_load_1st" name="first_load_1st">
+                        </div>
+                        <div class="form-group">
+                            <label for="trimming_1">Trimming 1:</label>
+                            <input type="time" id="trimming_1" name="trimming_1">
+                        </div>
+                        <div class="form-group">
+                            <label for="second_load_1st">Second Load 1st:</label>
+                            <input type="time" id="second_load_1st" name="second_load_1st">
+                        </div>
+                        <div class="form-group">
+                            <label for="loading_prep_2">Loading Prep 2:</label>
+                            <input type="time" id="loading_prep_2" name="loading_prep_2">
+                        </div>
+                        <div class="form-group">
+                            <label for="first_load_2nd">First Load 2nd:</label>
+                            <input type="time" id="first_load_2nd" name="first_load_2nd">
+                        </div>
+                        <div class="form-group">
+                            <label for="trimming_2">Trimming 2:</label>
+                            <input type="time" id="trimming_2" name="trimming_2">
+                        </div>
+                        <div class="form-group">
+                            <label for="second_load_2nd">Second Load 2nd:</label>
+                            <input type="time" id="second_load_2nd" name="second_load_2nd">
+                        </div>
+                        <div class="form-group">
+                            <label for="cleaning">Cleaning:</label>
+                            <input type="time" id="cleaning" name="cleaning">
+                        </div>
+                        <button type="submit" class="submit-btn">💾 Simpan Loading Process 1</button>
+                    </form>
+                </div>
+                
+                <div class="form-section">
+                    <button class="close-btn" onclick="hideForms()">&times;</button>
+                    <h3>⚓ Loading Process (Port)</h3>
+                    <form id="loadingForm2">
+                        <div class="form-group">
+                            <label for="truck_arrival2">Truck Arrival 2:</label>
+                            <input type="time" id="truck_arrival2" name="truck_arrival2">
+                        </div>
+                        <div class="form-group">
+                            <label for="scales_w_alumina">Scales w/ Alumina:</label>
+                            <input type="time" id="scales_w_alumina" name="scales_w_alumina">
+                        </div>
+                        <div class="form-group">
+                            <label for="to_pier">To Pier:</label>
+                            <input type="time" id="to_pier" name="to_pier">
+                        </div>
+                        <div class="form-group">
+                            <label for="parking2">Parking:</label>
+                            <input type="time" id="parking2" name="parking2">
+                        </div>
+                        <div class="form-group">
+                            <label for="air_compressor">Air Compressor:</label>
+                            <input type="time" id="air_compressor" name="air_compressor">
+                        </div>
+                        <div class="form-group">
+                            <label for="loading_vessel">Loading Vessel:</label>
+                            <input type="time" id="loading_vessel" name="loading_vessel">
+                        </div>
+                        <div class="form-group">
+                            <label for="plug_out">Plug-out:</label>
+                            <input type="time" id="plug_out" name="plug_out">
+                        </div>
+                        <div class="form-group">
+                            <label for="to_scales">To Scales:</label>
+                            <input type="time" id="to_scales" name="to_scales">
+                        </div>
+                        <div class="form-group">
+                            <label for="scales_wo">Scales w/o:</label>
+                            <input type="time" id="scales_wo" name="scales_wo">
+                        </div>
+                        <div class="form-group">
+                            <label for="departure">Departure:</label>
+                            <input type="time" id="departure" name="departure">
+                        </div>
+                        <button type="submit" class="submit-btn">🚢 Simpan Loading Process 2</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+                            
                         </div>
                     </div>
                     
