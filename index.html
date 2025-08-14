@@ -489,6 +489,69 @@
         </div>
     </div>
 
+    <div id="add-data" class="tab-content">
+<div class="table-container" style="margin-top: 30px;">
+                    <div class="table-header">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="table-title">📊 Data Harian</div>
+                            <button class="btn-tambah" onclick="toggleForms()">
+                                Tambah Data Baru
+                            </button>
+            </div>
+        </div>
+                            
+                    <div style="overflow-x: auto;">
+                        <table id="dataTable">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">ID</th>
+                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">JO</th>
+                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">Nopol</th>
+                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">Driver</th>
+                                    <th colspan="12" style="background: #1e40af; color: white; text-align: center;">Siklus Loading di Silo</th>
+                                    <th colspan="10" style="background: #059669; color: white; text-align: center;">Siklus di Pelabuhan</th>
+                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">Aksi</th>
+                                </tr>
+                                <tr>
+                                    <!-- Silo Headers -->
+                                    <th style="background: #3b82f6; color: white;">Truck Arrival</th>
+                                    <th style="background: #3b82f6; color: white;">Scales w/o Alumina</th>
+                                    <th style="background: #3b82f6; color: white;">Parking</th>
+                                    <th style="background: #3b82f6; color: white;">Loading Prep 1</th>
+                                    <th style="background: #3b82f6; color: white;">First Load 1st</th>
+                                    <th style="background: #3b82f6; color: white;">Trimming 1</th>
+                                    <th style="background: #3b82f6; color: white;">Second Load 1st</th>
+                                    <th style="background: #3b82f6; color: white;">Loading Prep 2</th>
+                                    <th style="background: #3b82f6; color: white;">First Load 2nd</th>
+                                    <th style="background: #3b82f6; color: white;">Trimming 2</th>
+                                    <th style="background: #3b82f6; color: white;">Second Load 2nd</th>
+                                    <th style="background: #3b82f6; color: white;">Cleaning</th>
+                                    <!-- Port Headers -->
+                                    <th style="background: #10b981; color: white;">Truck Arrival</th>
+                                    <th style="background: #10b981; color: white;">Scales w/ Alumina</th>
+                                    <th style="background: #10b981; color: white;">To Pier</th>
+                                    <th style="background: #10b981; color: white;">Parking</th>
+                                    <th style="background: #10b981; color: white;">Air Compressor</th>
+                                    <th style="background: #10b981; color: white;">Loading Vessel</th>
+                                    <th style="background: #10b981; color: white;">Plug-out</th>
+                                    <th style="background: #10b981; color: white;">To Scales</th>
+                                    <th style="background: #10b981; color: white;">Scales w/o</th>
+                                    <th style="background: #10b981; color: white;">Departure</th>
+                                </tr>
+                            </thead>
+                            <tbody id="dataTableBody">
+                                <tr>
+                                    <td colspan="27" style="text-align: center; padding: 40px; color: #64748b;">
+                                        📋 Belum ada data. Klik "Tambah Data Baru" untuk menambahkan data pertama.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+
     <div class="forms-container" id="formsContainer">
                 <div class="form-section">
                     <button class="close-btn" onclick="hideForms()">&times;</button>
@@ -561,7 +624,8 @@
                         <button type="submit" class="submit-btn">💾 Simpan Loading Process 1</button>
                     </form>
                 </div>
-                
+                   </div>
+    </div>
                 <div class="form-section">
                     <button class="close-btn" onclick="hideForms()">&times;</button>
                     <h3>⚓ Loading Process (Port)</h3>
@@ -609,71 +673,7 @@
                         <button type="submit" class="submit-btn">🚢 Simpan Loading Process 2</button>
                     </form>
                 </div>
-    
-    <div id="add-data" class="tab-content">
-<div class="table-container" style="margin-top: 30px;">
-                    <div class="table-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div class="table-title">📊 Data Harian</div>
-                            <button class="btn-tambah" onclick="toggleForms()">
-                                Tambah Data Baru
-                            </button>
-            </div>
-        </div>
-                            
-                        </div>
-                    </div>
-                    
-                    <div style="overflow-x: auto;">
-                        <table id="dataTable">
-                            <thead>
-                                <tr>
-                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">ID</th>
-                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">JO</th>
-                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">Nopol</th>
-                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">Driver</th>
-                                    <th colspan="12" style="background: #1e40af; color: white; text-align: center;">Siklus Loading di Silo</th>
-                                    <th colspan="10" style="background: #059669; color: white; text-align: center;">Siklus di Pelabuhan</th>
-                                    <th rowspan="2" style="background: #334155; color: white; vertical-align: middle;">Aksi</th>
-                                </tr>
-                                <tr>
-                                    <!-- Silo Headers -->
-                                    <th style="background: #3b82f6; color: white;">Truck Arrival</th>
-                                    <th style="background: #3b82f6; color: white;">Scales w/o Alumina</th>
-                                    <th style="background: #3b82f6; color: white;">Parking</th>
-                                    <th style="background: #3b82f6; color: white;">Loading Prep 1</th>
-                                    <th style="background: #3b82f6; color: white;">First Load 1st</th>
-                                    <th style="background: #3b82f6; color: white;">Trimming 1</th>
-                                    <th style="background: #3b82f6; color: white;">Second Load 1st</th>
-                                    <th style="background: #3b82f6; color: white;">Loading Prep 2</th>
-                                    <th style="background: #3b82f6; color: white;">First Load 2nd</th>
-                                    <th style="background: #3b82f6; color: white;">Trimming 2</th>
-                                    <th style="background: #3b82f6; color: white;">Second Load 2nd</th>
-                                    <th style="background: #3b82f6; color: white;">Cleaning</th>
-                                    <!-- Port Headers -->
-                                    <th style="background: #10b981; color: white;">Truck Arrival</th>
-                                    <th style="background: #10b981; color: white;">Scales w/ Alumina</th>
-                                    <th style="background: #10b981; color: white;">To Pier</th>
-                                    <th style="background: #10b981; color: white;">Parking</th>
-                                    <th style="background: #10b981; color: white;">Air Compressor</th>
-                                    <th style="background: #10b981; color: white;">Loading Vessel</th>
-                                    <th style="background: #10b981; color: white;">Plug-out</th>
-                                    <th style="background: #10b981; color: white;">To Scales</th>
-                                    <th style="background: #10b981; color: white;">Scales w/o</th>
-                                    <th style="background: #10b981; color: white;">Departure</th>
-                                </tr>
-                            </thead>
-                            <tbody id="dataTableBody">
-                                <tr>
-                                    <td colspan="27" style="text-align: center; padding: 40px; color: #64748b;">
-                                        📋 Belum ada data. Klik "Tambah Data Baru" untuk menambahkan data pertama.
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-        </div>
+        
     <script src="scripts.js" defer></script>
 
 </body>
