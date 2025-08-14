@@ -1,4 +1,4 @@
-        // Data trucking per hari
+// Data trucking per hari
         const truckData = {
             day1: {
                 'A9568U': { netto: 29.67, siklus: 3 },
